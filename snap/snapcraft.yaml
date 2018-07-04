@@ -1,0 +1,16 @@
+name: tieto-dev-swish-maven
+version: '2.10'
+summary: Maven snap
+description: Maven snap.
+grade: stable
+confinement: strict
+
+apps:
+  apache-maven:
+    command: bin/maven
+
+parts:
+  maven-part:
+    source-type: git
+    source: https://github.com/DanielAxelssonTieto/maven-source/apache-maven-3.5.2-bin.tar.gz
+    plugin: autotools
